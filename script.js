@@ -38,6 +38,36 @@ const revealObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 const projectData = {
+  'ai-advisor': {
+    title: 'UTA AI Advisor',
+    summary: 'A generative AI academic advising assistant for UT Arlington Computer Science students. Students sign in and ask questions in plain English about courses, prerequisites, schedules, and degree planning. Answers are grounded in official advising documents through retrieval-augmented generation (RAG) and checked against each student\'s records.',
+    bullets: [
+      'Students reach the app through Route 53 and an Application Load Balancer, and sign in with Amazon Cognito.',
+      'The Chat UI sends questions to a LangChain application through a FastAPI endpoint.',
+      'LangChain calls Amazon Bedrock, using Gemma 3 27B for responses and Titan Embeddings V2 for semantic search.',
+      'A RAG pipeline chunks and embeds advising documents into a vector database; student records in DynamoDB support eligibility checks.',
+      'The Chat UI, LangChain app, and vector database run as Docker containers on EC2, with images in Amazon ECR, deployed by a GitHub Actions CI/CD pipeline.',
+      'Tested with simulated student profiles to validate eligibility and advising answers.'
+    ],
+    stack: 'LangChain • Amazon Bedrock • Gemma 3 27B • Titan Embeddings V2 • RAG • ChromaDB • FastAPI • Streamlit • Cognito • DynamoDB • EC2 • Docker • ECR • ALB • Route 53 • GitHub Actions',
+    image: 'assets/ai-advisor-architecture.png',
+    screenshots: [
+      { src: 'assets/ai-advisor-login.jpg', caption: 'Login page: secure student sign-in with Amazon Cognito' },
+      { src: 'assets/ai-advisor-chat.jpg', caption: 'Chat UI: course details, prerequisites, and a personalized eligibility check' }
+    ]
+  },
+  'geofence-edge': {
+    title: 'Geofence-Aware Edge Deployment',
+    summary: 'Location-based software management for edge devices on military vehicles using IBM Edge Application Manager (IEAM), built on Open Horizon. Each geographic zone is approved for a specific set of software, and the vehicles automatically run only what is allowed where they are.',
+    bullets: [
+      'Each vehicle runs an Open Horizon agent on its onboard edge device, managed from a central IEAM hub on OpenShift.',
+      'Deployment policies tie each containerized service to the zones where it is approved.',
+      'When a vehicle crosses a geofence, IEAM re-evaluates its policies and automatically removes or deploys services with no manual intervention.',
+      'Agents pull from the hub over outbound connections and keep their approved workloads running when the vehicle is disconnected.'
+    ],
+    stack: 'IBM Edge Application Manager • Open Horizon • Geofencing • OpenShift • Docker • Edge Computing',
+    image: 'assets/edge-fleet.svg'
+  },
   'ai-inspector': {
     title: 'AI Inspector',
     summary: 'A cloud-based package inspection system that classifies packages as OK or damaged and streams results to a live dashboard.',
@@ -107,8 +137,18 @@ function openProject(key) {
         >
       </div>
     ` : ''}
-    
-   
+
+    ${project.screenshots ? `
+      <div class="project-detail-image">
+        <h3>Screenshots</h3>
+        ${project.screenshots.map(shot => `
+          <figure style="margin: 0 0 20px;">
+            <img src="${shot.src}" alt="${project.title}: ${shot.caption}" loading="lazy" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.08);">
+            <figcaption style="font-size: 13px; opacity: 0.7; margin-top: 6px; text-align: center;">${shot.caption}</figcaption>
+          </figure>
+        `).join('')}
+      </div>
+    ` : ''}
 
 
 
