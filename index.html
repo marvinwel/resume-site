@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Marvin Wellington — Cloud, Platform, and Software Engineer portfolio." />
+  <title>Marvin Wellington | Cloud • Platform • Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Marvin Wellington home"><img class="brand-avatar" src="assets/brand-avatar.png" alt="" /><span>MW</span> Marvin Wellington</a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-small" href="resume.pdf" download>↓ Download Resume</a>
+    </nav>
+
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow hero-eyebrow">CLOUD / PLATFORM / SOFTWARE ENGINEER</p>
+        <h1>Marvin <span>Wellington</span></h1>
+        <p class="hero-lead">I build scalable cloud infrastructure, automation, and software systems that solve real-world problems.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View My Projects →</a>
+          <a class="btn btn-outline" href="resume.pdf" download>↓ Download Resume</a>
+        </div>
+        <div class="hero-stats" aria-label="Professional highlights">
+          <div><strong>4+</strong><span>Years Experience</span></div>
+          <div><strong>AWS + Azure</strong><span>Cloud Platforms</span></div>
+          <div><strong>Cloud & DevOps</strong><span>Build • Automate • Scale</span></div>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-glow"></div>
+        <img src="assets/marvin-portrait.png" alt="Marvin Wellington in a navy suit" />
+        <div class="hero-mantra" aria-hidden="true">BUILD<br>AUTOMATE<br>SCALE<br>INNOVATE<br>DELIVER</div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section shell" id="skills">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow blue">TECHNICAL SKILLS</p>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="icon">☁</div><h3>Cloud & Infrastructure</h3><p>AWS, Azure, IBM Cloud, EC2, S3, IAM, VPC</p></article>
+        <article class="skill-card reveal"><div class="icon">⬡</div><h3>Containers & Orchestration</h3><p>Docker, Kubernetes, OpenShift, Helm</p></article>
+        <article class="skill-card reveal"><div class="icon">⚙</div><h3>DevOps & Automation</h3><p>Terraform, Ansible, Git, GitLab, CI/CD, Artifactory, Prometheus</p></article>
+        <article class="skill-card reveal"><div class="icon">&lt;/&gt;</div><h3>Programming & Data</h3><p>Python, Java, C/C++, SQL, NoSQL, Data Structures</p></article>
+        <article class="skill-card reveal"><div class="icon">⌘</div><h3>Systems & Networking</h3><p>Linux, Networking, IoT, Agile, Jupyter Notebooks</p></article>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="projects">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow blue">PROJECTS</p>
+            <p>Projects that demonstrate cloud architecture, automation, AI/ML, software engineering, and systems thinking.</p>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-project="ai-inspector">
+            <div class="project-visual"><img src="assets/ai-inspector.png" alt="AI Inspector computer vision project illustration"></div>
+            <div class="project-body"><h3>AI Inspector</h3><p>AI-powered package inspection with real-time cloud updates and dashboard monitoring.</p><div class="tags"><span>AWS</span><span>SageMaker</span><span>Lambda</span><span>DynamoDB</span></div><button class="text-link" type="button">View Project →</button></div>
+          </article>
+
+          <article class="project-card reveal" data-project="cloud-lab">
+            <div class="project-visual"><img src="assets/cloud-infrastructure.png" alt="Cloud infrastructure lab architecture illustration"></div>
+            <div class="project-body"><h3>Cloud Infrastructure Lab</h3><p>Infrastructure-as-code patterns for repeatable cloud environments and container workloads.</p><div class="tags"><span>Terraform</span><span>AWS</span><span>Kubernetes</span></div><button class="text-link" type="button">View Project →</button></div>
+          </article>
+
+          <article class="project-card reveal" data-project="automation">
+            <div class="project-visual"><img src="assets/automation.svg" alt="Automation tools terminal illustration"></div>
+            <div class="project-body"><h3>Automation Tools</h3><p>Scripts and workflows designed to remove repetitive work and improve reliability.</p><div class="tags"><span>Python</span><span>Bash</span><span>Ansible</span><span>Git</span></div><button class="text-link" type="button">View Project →</button></div>
+          </article>
+
+          <article class="project-card reveal" data-project="drone">
+            <div class="project-visual"><img src="assets/drone.png" alt="Matrice 210 drone inspection illustration"></div>
+            <div class="project-body"><h3>Drone Inspection — Matrice 210</h3><p>Linux-based image capture and ML inference workflow for automated drone inspections.</p><div class="tags"><span>Linux</span><span>Docker</span><span>Node-RED</span><span>ML</span></div><button class="text-link" type="button">View Project →</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow blue">PROFESSIONAL EXPERIENCE</p><h2>Experience that combines engineering and execution.</h2></div>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-mark"><img src="assets/ibm-icon.png" alt="IBM"></div>
+          <div class="timeline-content"><div class="timeline-title"><div><h3>Software Engineer</h3><p>IBM • Coppell, TX</p></div><time>Dec 2021 – Mar 2026</time></div><ul><li>Automated cloud provisioning and configuration with Ansible.</li><li>Built CI/CD workflows using OpenShift.</li><li>Developed and tested REST APIs.</li><li>Containerized applications with Docker and Kubernetes.</li><li>Built Kubernetes Helm operators and secure internal GitLab environments.</li></ul></div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-mark amazon"><img src="assets/aws-icon.png" alt="Amazon"></div>
+          <div class="timeline-content"><div class="timeline-title"><div><h3>Software Engineer Intern — Department of Defense</h3><p>Amazon • Arlington, VA</p></div><time>Summer 2021</time></div><ul><li>Created CloudFormation templates for automated provisioning.</li><li>Implemented IAM roles, policies, and VPC configurations.</li><li>Automated workflows with AWS Lambda and Neptune.</li><li>Worked with graph data and prediction workflows.</li></ul></div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-mark drone-mark"><img src="assets/drone-icon.png" alt="Drone icon"></div>
+          <div class="timeline-content"><div class="timeline-title"><div><h3>Drone Inspection — Matrice 210</h3><p>Self-Directed Project • Linux Platform</p></div><time>Independent Project</time></div><ul><li>Designed a solution for drone-captured images to automate inspections.</li><li>Built a Linux environment on the drone’s Manifold for real-time image processing.</li><li>Containerized an ML inference engine using Docker.</li><li>Automated capture, processing, and reporting with IBM Node-RED.</li></ul></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="education">
+      <div class="shell split-grid">
+        <div class="reveal">
+          <p class="eyebrow blue">EDUCATION</p>
+          <h2>Academic foundation</h2>
+          <div class="list-stack">
+            <div><strong>M.S. Computer Science</strong><span>University of Texas at Arlington • Dec 2027</span></div>
+            <div><strong>B.S. Computer Science</strong><span>University of Texas at Arlington </span></div>
+            <div><strong>Associate of Arts</strong><span>Tarrant County College</span></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow blue">CERTIFICATIONS</p>
+          <h2>Credentials</h2>
+          <div class="credential-grid">
+            <div>☁ <span>AWS Cloud Practitioner</span></div>
+            <div>◈ <span>Microsoft Certified: Azure Fundamentals</span></div>
+            <div>✓ <span>CompTIA A+</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="shell footer-inner">
+      <div><h2>Let’s Build What’s Next</h2><p>Open to cloud, platform, software engineering, and automation opportunities.</p></div>
+      <div class="footer-actions"><a class="btn btn-outline-light" href="https://www.linkedin.com/in/marvin-wellington-5b6711316/">▣ LinkedIn</a><a class="btn btn-outline-light" href="mailto:Marvinwel@yahoo.com">✉ Email Me</a><a class="btn btn-outline-light" href="https://github.com/marvinwel" target="_blank" rel="noreferrer">◉ GitHub</a></div>
+    </div>
+  </footer>
+
+  <dialog class="project-modal" id="projectModal">
+    <button class="modal-close" aria-label="Close project details">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
