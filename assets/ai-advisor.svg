@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1086 358" role="img" aria-labelledby="t">
+  <title id="t">AI Advisor chat interface connected to an LLM</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071530"/>
+      <stop offset="0.45" stop-color="#0c2350"/>
+      <stop offset="1" stop-color="#0a1b3d"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0.4" cy="0" r="0.6">
+      <stop offset="0" stop-color="#3a6fc4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#3a6fc4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orangeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f29a4a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f29a4a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hdr" x1="0" x2="1">
+      <stop offset="0" stop-color="#1f4589"/>
+      <stop offset="1" stop-color="#16356b"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="0" x2="1">
+      <stop offset="0" stop-color="#f29a4a"/>
+      <stop offset="1" stop-color="#e9792f"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a5bb0"/>
+      <stop offset="1" stop-color="#122c5c"/>
+    </linearGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="gridMask"><rect x="0" y="210" width="1086" height="148" fill="url(#gridFade)"/></mask>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="winShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#3a6fc4" flood-opacity="0.45"/>
+    </filter>
+    <filter id="bubble" x="-10%" y="-20%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0b1e3d" flood-opacity="0.1"/>
+    </filter>
+    <clipPath id="winClip"><rect width="390" height="318" rx="16"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1086" height="358" fill="url(#bg)"/>
+  <rect width="1086" height="358" fill="url(#blueGlow)"/>
+  <ellipse cx="740" cy="170" rx="320" ry="220" fill="url(#orangeGlow)" opacity="0.6"/>
+
+  <!-- Floor grid (perspective lines) -->
+  <g mask="url(#gridMask)" stroke="#7fb3ff" stroke-opacity="0.22" stroke-width="1">
+    <path d="M0 230H1086M0 252H1086M0 278H1086M0 308H1086M0 342H1086"/>
+    <path d="M543 210L-300 358M543 210L-100 358M543 210L100 358M543 210L300 358M543 210L460 358M543 210L626 358M543 210L786 358M543 210L986 358M543 210L1186 358M543 210L1386 358"/>
+  </g>
+
+  <!-- Bokeh -->
+  <g filter="url(#blur)">
+    <circle cx="80" cy="40" r="20" fill="#3a6fc4" opacity="0.55"/>
+    <circle cx="312" cy="82" r="12" fill="#7fb3ff" opacity="0.5"/>
+    <circle cx="395" cy="315" r="15" fill="#f29a4a" opacity="0.35"/>
+    <circle cx="1027" cy="47" r="17" fill="#7fb3ff" opacity="0.4"/>
+    <circle cx="1051" cy="301" r="11" fill="#f29a4a" opacity="0.45"/>
+    <circle cx="248" cy="158" r="8" fill="#7fb3ff" opacity="0.4"/>
+  </g>
+
+  <g transform="translate(-183 0)">
+  <!-- Neural network -->
+  <g stroke="#7fb3ff" stroke-width="1" opacity="0.35" fill="none">
+    <path d="M850 40L930 70L1020 50M930 70L1060 140M850 300L930 280L1040 320M930 280L1060 230M1060 140L1060 230M800 20L850 40"/>
+  </g>
+  <g fill="#9fc1ff" opacity="0.7">
+    <circle cx="850" cy="40" r="3.5"/><circle cx="930" cy="70" r="3"/><circle cx="1020" cy="50" r="3.5"/><circle cx="1060" cy="140" r="3"/>
+    <circle cx="850" cy="300" r="3.5"/><circle cx="930" cy="280" r="3"/><circle cx="1040" cy="320" r="3.5"/><circle cx="1060" cy="230" r="3"/><circle cx="800" cy="20" r="3"/>
+  </g>
+
+  <!-- LLM chip -->
+  <g transform="translate(862 96)">
+    <g fill="#8fb2ea" opacity="0.75">
+      <rect x="28" y="-20" width="8" height="12" rx="2"/><rect x="56" y="-20" width="8" height="12" rx="2"/><rect x="84" y="-20" width="8" height="12" rx="2"/><rect x="112" y="-20" width="8" height="12" rx="2"/>
+      <rect x="28" y="158" width="8" height="12" rx="2"/><rect x="56" y="158" width="8" height="12" rx="2"/><rect x="84" y="158" width="8" height="12" rx="2"/><rect x="112" y="158" width="8" height="12" rx="2"/>
+      <rect x="-20" y="28" width="12" height="8" rx="2"/><rect x="-20" y="56" width="12" height="8" rx="2"/><rect x="-20" y="84" width="12" height="8" rx="2"/><rect x="-20" y="112" width="12" height="8" rx="2"/>
+      <rect x="158" y="28" width="12" height="8" rx="2"/><rect x="158" y="56" width="12" height="8" rx="2"/><rect x="158" y="84" width="12" height="8" rx="2"/><rect x="158" y="112" width="12" height="8" rx="2"/>
+    </g>
+    <rect x="-10" y="-10" width="170" height="170" rx="34" fill="#3a6fc4" opacity="0.12"/>
+    <rect width="150" height="150" rx="26" fill="url(#chip)" stroke="#7fb3ff" stroke-opacity="0.6" stroke-width="1.5"/>
+    <g transform="translate(40 34)">
+      <g stroke="#f29a4a" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M10 22L35 8L60 22L35 36ZM35 8V36M10 22H60"/></g>
+      <g fill="#f29a4a"><circle cx="10" cy="22" r="5"/><circle cx="35" cy="8" r="5"/><circle cx="60" cy="22" r="5"/><circle cx="35" cy="36" r="5"/></g>
+    </g>
+    <text x="75" y="112" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="4">LLM</text>
+  </g>
+
+  <!-- Request / response flow -->
+  <g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M816 150C832 150 838 152 856 152" stroke="#7fb3ff" stroke-dasharray="2 8"/>
+    <path d="M850 146l8 6-8 6" stroke="#7fb3ff"/>
+    <path d="M856 200C840 200 834 204 822 204" stroke="#f29a4a" stroke-dasharray="2 8"/>
+    <path d="M824 198l-8 6 8 6" stroke="#f29a4a"/>
+  </g>
+
+  <!-- Chat window -->
+  <g transform="translate(420 20)" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+    <rect width="390" height="318" rx="16" fill="#ffffff" filter="url(#winShadow)"/>
+    <g clip-path="url(#winClip)">
+      <rect width="390" height="318" fill="#ffffff"/>
+      <rect width="390" height="46" fill="url(#hdr)"/>
+      <path d="M26 13l3.1 6.9 7.5.7-5.7 4.9 1.7 7.4-6.6-3.9-6.6 3.9 1.7-7.4-5.7-4.9 7.5-.7z" fill="#f29a4a"/>
+      <text x="44" y="22" font-size="14" font-weight="800" fill="#ffffff">Team 2 AI Advisor</text>
+      <text x="44" y="35" font-size="9.5" fill="#c9d6ef">Computer Science Academic Advisor</text>
+      <rect x="318" y="11" width="58" height="24" rx="7" fill="url(#btn)"/>
+      <text x="347" y="27" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Log out</text>
+
+      <!-- msg 1: advisor -->
+      <circle cx="24" cy="70" r="10" fill="#1f4589"/>
+      <path d="M24 64.5l1.6 3.6 4 .4-3 2.6.9 3.9-3.5-2.1-3.5 2.1.9-3.9-3-2.6 4-.4z" fill="#f29a4a"/>
+      <rect x="40" y="58" width="200" height="40" rx="11" fill="#f1f3f8" filter="url(#bubble)"/>
+      <text font-size="10.5" fill="#1f2a44"><tspan x="51" y="74">Hi! I'm your UTA CSE AI Advisor.</tspan><tspan x="51" y="89">How can I help you today?</tspan></text>
+
+      <!-- msg 2: student -->
+      <rect x="166" y="106" width="210" height="40" rx="11" fill="#1f4589"/>
+      <text font-size="10.5" fill="#ffffff"><tspan x="177" y="122">Can I take CSE 4392 next semester?</tspan><tspan x="177" y="137">I work Mondays and Wednesdays.</tspan></text>
+
+      <!-- msg 3: advisor -->
+      <circle cx="24" cy="168" r="10" fill="#1f4589"/>
+      <path d="M24 162.5l1.6 3.6 4 .4-3 2.6.9 3.9-3.5-2.1-3.5 2.1.9-3.9-3-2.6 4-.4z" fill="#f29a4a"/>
+      <rect x="40" y="154" width="226" height="54" rx="11" fill="#f1f3f8" filter="url(#bubble)"/>
+      <text font-size="10.5" fill="#1f2a44"><tspan x="51" y="170">Yes! You've met the prerequisites, and</tspan><tspan x="51" y="185">the Tue/Thu section fits your schedule</tspan><tspan x="51" y="200">with no conflicts.</tspan></text>
+
+      <!-- msg 4: student -->
+      <rect x="180" y="216" width="196" height="26" rx="11" fill="#1f4589"/>
+      <text x="191" y="233" font-size="10.5" fill="#ffffff">What do I still need to graduate?</text>
+
+      <!-- typing -->
+      <circle cx="24" cy="261" r="10" fill="#1f4589"/>
+      <path d="M24 255.5l1.6 3.6 4 .4-3 2.6.9 3.9-3.5-2.1-3.5 2.1.9-3.9-3-2.6 4-.4z" fill="#f29a4a"/>
+      <rect x="40" y="250" width="48" height="22" rx="11" fill="#f1f3f8"/>
+      <g fill="#8a97b0"><circle cx="54" cy="261" r="2.5"/><circle cx="64" cy="261" r="2.5"/><circle cx="74" cy="261" r="2.5"/></g>
+
+      <!-- input -->
+      <rect x="0" y="280" width="390" height="38" fill="#1f4589"/>
+      <rect x="10" y="286" width="370" height="26" rx="7" fill="#ffffff"/>
+      <text x="20" y="303" font-size="10" fill="#6b778f">Type your message here...</text>
+    </g>
+    <rect width="390" height="318" rx="16" fill="none" stroke="#7fb3ff" stroke-opacity="0.35"/>
+  </g>
+
+  </g>
+</svg>
