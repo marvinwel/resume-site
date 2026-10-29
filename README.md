@@ -4,7 +4,7 @@ This is the source for my personal website, where I showcase my work history, te
 
 ## About Me
 
-I'm a cloud engineer with about four years of experience at IBM, currently pursuing a Master's in Computer Science at the University of Texas at Arlington. My work focuses on cloud infrastructure, AWS, edge solutions, and generative AI applications, including retrieval-augmented generation (RAG) pipelines and agentic workflows built with LangChain and LangGraph.
+I'm a cloud engineer with about four years of experience at IBM, currently pursuing a Master's in Computer Science at the University of Texas at Arlington. My work focuses on cloud infrastructure, AWS, edge solutions, and generative AI applications, including retrieval-augmented generation (RAG) pipelines and agentic workflows built with LangChain and LangGraph. 
 
 ## What's on the Site
 
