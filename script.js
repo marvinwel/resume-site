@@ -76,8 +76,11 @@ const projectData = {
       'Designed around S3, Lambda, API Gateway, DynamoDB, SageMaker, and WebSockets.',
       'Dashboard displays historical inspection data, confidence, trends, images, and connected devices.'
     ],
-    stack: 'AWS • SageMaker • Lambda • API Gateway • DynamoDB • S3 • WebSockets',
-     image: 'assets/AI-inspection-architecture.png',
+    stack: 'AWS • SageMaker • Lambda • API Gateway • DynamoDB • S3 • Cloudfront • WebSockets',
+     image: 'assets/classify.png',
+     fetchdata: [
+      { src: 'assets/fetch-data.png', caption: 'Fetch Data flow to populate app with previous inspections' },
+    ],
     github: 'https://github.com/marvinwel/AI_Inspection_CSE_4333_5333'
   },
   'cloud-lab': {
@@ -142,6 +145,17 @@ function openProject(key) {
       <div class="project-detail-image">
         <h3>Screenshots</h3>
         ${project.screenshots.map(shot => `
+          <figure style="margin: 0 0 20px;">
+            <img src="${shot.src}" alt="${project.title}: ${shot.caption}" loading="lazy" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.08);">
+            <figcaption style="font-size: 13px; opacity: 0.7; margin-top: 6px; text-align: center;">${shot.caption}</figcaption>
+          </figure>
+        `).join('')}
+      </div>
+    ` : ''}
+    ${project.fetchdata ? `
+      <div class="project-detail-image">
+        <h3>Fetch Data Architecture</h3>
+        ${project.fetchdata.map(shot => `
           <figure style="margin: 0 0 20px;">
             <img src="${shot.src}" alt="${project.title}: ${shot.caption}" loading="lazy" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.08);">
             <figcaption style="font-size: 13px; opacity: 0.7; margin-top: 6px; text-align: center;">${shot.caption}</figcaption>
